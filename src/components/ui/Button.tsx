@@ -35,7 +35,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   ].join(' '),
   danger: [
     'bg-[var(--flag-red)] text-white',
-    'hover:bg-red-700',
+    'hover:brightness-90',
   ].join(' '),
 }
 
