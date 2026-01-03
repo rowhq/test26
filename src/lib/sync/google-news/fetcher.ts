@@ -100,17 +100,17 @@ async function getCandidatesToSearch(): Promise<
  * Get parties to search for
  */
 async function getPartiesToSearch(): Promise<
-  Array<{ id: string; name: string; abbreviation: string }>
+  Array<{ id: string; name: string; shortName: string }>
 > {
   const result = await sql`
-    SELECT id, name, abbreviation
+    SELECT id, name, short_name as "shortName"
     FROM parties
     WHERE id IN (
       SELECT DISTINCT party_id FROM candidates WHERE is_active = TRUE
     )
     LIMIT 20
   `
-  return result as Array<{ id: string; name: string; abbreviation: string }>
+  return result as Array<{ id: string; name: string; shortName: string }>
 }
 
 /**
@@ -182,8 +182,7 @@ async function saveNewsItem(
       ${item.pubDate},
       ${0.5}
     )
-    ON CONFLICT (url) DO UPDATE SET
-      updated_at = NOW()
+    ON CONFLICT (url) DO NOTHING
   `
 }
 
