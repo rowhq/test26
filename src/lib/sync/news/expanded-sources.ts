@@ -22,7 +22,7 @@ export const ORIGINAL_SOURCES: RSSSource[] = [
   {
     id: 'elcomercio',
     name: 'El Comercio',
-    url: 'https://elcomercio.pe/feed/politica/',
+    url: 'https://elcomercio.pe/arcio/rss/category/politica/',
     category: 'mainstream',
     language: 'es',
     priority: 10,
@@ -30,7 +30,7 @@ export const ORIGINAL_SOURCES: RSSSource[] = [
   {
     id: 'larepublica',
     name: 'La República',
-    url: 'https://larepublica.pe/feed/politica/',
+    url: 'https://larepublica.pe/arcio/rss/category/politica/',
     category: 'mainstream',
     language: 'es',
     priority: 10,
@@ -38,7 +38,7 @@ export const ORIGINAL_SOURCES: RSSSource[] = [
   {
     id: 'rpp',
     name: 'RPP Noticias',
-    url: 'https://rpp.pe/feed/politica',
+    url: 'https://rpp.pe/feed',
     category: 'mainstream',
     language: 'es',
     priority: 9,
@@ -46,7 +46,7 @@ export const ORIGINAL_SOURCES: RSSSource[] = [
   {
     id: 'gestion',
     name: 'Gestión',
-    url: 'https://gestion.pe/feed/politica/',
+    url: 'https://gestion.pe/arcio/rss/',
     category: 'mainstream',
     language: 'es',
     priority: 8,
@@ -54,7 +54,7 @@ export const ORIGINAL_SOURCES: RSSSource[] = [
   {
     id: 'peru21',
     name: 'Peru21',
-    url: 'https://peru21.pe/feed/politica/',
+    url: 'https://peru21.pe/arcio/rss/',
     category: 'mainstream',
     language: 'es',
     priority: 8,
@@ -62,7 +62,7 @@ export const ORIGINAL_SOURCES: RSSSource[] = [
   {
     id: 'correo',
     name: 'Diario Correo',
-    url: 'https://diariocorreo.pe/feed/politica/',
+    url: 'https://diariocorreo.pe/arcio/rss/',
     category: 'mainstream',
     language: 'es',
     priority: 7,
@@ -80,46 +80,30 @@ export const EXPANDED_SOURCES: RSSSource[] = [
     url: 'https://andina.pe/agencia/rss/noticia-politica-5.rss',
     category: 'official',
     language: 'es',
-    priority: 10, // High priority - official state agency
+    priority: 10,
   },
 
-  // Digital Media
+  // Digital Media - Infobae tiene RSS funcional
   {
     id: 'infobae',
     name: 'Infobae Perú',
-    url: 'https://www.infobae.com/feeds/rss/peru/',
+    url: 'https://www.infobae.com/peru/rss/',
     category: 'digital',
     language: 'es',
     priority: 9,
   },
+
+  // IDL Reporteros - investigación
   {
-    id: 'larazon',
-    name: 'La Razón',
-    url: 'https://www.larazon.pe/feed/',
+    id: 'idl',
+    name: 'IDL Reporteros',
+    url: 'https://www.idl-reporteros.pe/feed/',
     category: 'digital',
     language: 'es',
-    priority: 6,
+    priority: 9,
   },
 
-  // TV Channels
-  {
-    id: 'americatv',
-    name: 'América TV',
-    url: 'https://www.americatv.com.pe/noticias/rss/politica',
-    category: 'tv',
-    language: 'es',
-    priority: 8,
-  },
-  {
-    id: 'canaln',
-    name: 'Canal N',
-    url: 'https://canaln.pe/rss/politica.xml',
-    category: 'tv',
-    language: 'es',
-    priority: 8,
-  },
-
-  // Radio Digital
+  // Exitosa
   {
     id: 'exitosa',
     name: 'Exitosa Noticias',
@@ -127,34 +111,6 @@ export const EXPANDED_SOURCES: RSSSource[] = [
     category: 'digital',
     language: 'es',
     priority: 7,
-  },
-
-  // Traditional Press
-  {
-    id: 'expreso',
-    name: 'Diario Expreso',
-    url: 'https://www.expreso.com.pe/feed/',
-    category: 'mainstream',
-    language: 'es',
-    priority: 6,
-  },
-  {
-    id: 'ojo',
-    name: 'Diario Ojo',
-    url: 'https://ojo.pe/feed/actualidad/',
-    category: 'mainstream',
-    language: 'es',
-    priority: 5,
-  },
-
-  // Investigative
-  {
-    id: 'idl',
-    name: 'IDL Reporteros',
-    url: 'https://www.idl-reporteros.pe/feed/',
-    category: 'digital',
-    language: 'es',
-    priority: 9, // High priority for investigative journalism
   },
 ]
 

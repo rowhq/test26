@@ -94,8 +94,7 @@ export async function GET(request: NextRequest) {
               ${item.pubDate || new Date().toISOString()},
               ${0.5}
             )
-            ON CONFLICT (url) DO UPDATE SET
-              updated_at = NOW()
+            ON CONFLICT (url) DO NOTHING
           `
 
           stats.itemsSaved++
